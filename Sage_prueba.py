@@ -2,7 +2,10 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 import pandas as pd
 import numpy as np
+import toml
 
+# Cargar el archivo secrets.toml
+secrets = toml.load('.streamlit/secrets.toml')
 # Cargar los secretos desde el archivo secrets.toml
 try:
     username = st.secrets["auth"]["username"]
